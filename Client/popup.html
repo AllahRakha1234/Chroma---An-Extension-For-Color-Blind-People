@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script defer src="./content.js"></script>
+  <!-- Bootsrtap Link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+  <title>Sign Up</title>
+
+  <!-- CSS FOR SIGN UP PAGE -->
+
+  <style>
+    * {
+      font-family: 'Gill Sans', 'Gill Sans MT', "Calibri", 'Trebuchet MS', "sans-serif";
+      color: white;
+    }
+
+    body {
+      background: url("./img/download.jpg") no-repeat center/cover;
+    }
+
+    .custom-popup {
+      width: 20rem;
+    }
+
+    .img {
+      display: inline;
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .image {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    h4 {
+      font-size: 2rem;
+      position: relative;
+      top: 1.5rem;
+    }
+
+    .title-container {
+      position: relative;
+      left: 3.5rem;
+    }
+
+    /* POPUP DIVS ARE DISPLAYED NONE. WHEN THE USER WILL LOGIN AND WE CAN GET THE DISEASE OF THE USER ONLY THEN ONE OF EACH DISEASE IS BLOCKED AND THE DEFAULT BLOCK WILL BE DISPLAYED NONE */
+
+    .protonopia,
+    .duetronopia,
+    .tritanopia {
+      display: none;
+    }
+  </style>
+
+</head>
+
+<body class="container-fluid">
+  <div class="title-container d-flex">
+    <img class="image" src="./img/chroma-logo-removebg-preview.png" alt="">
+    <h4 class="h4 ">Chroma</h4>
+  </div>
+  <!-- THE DEFAULT BLOCK POPUP THAT THE USER WILL SEE IF HE's NOT LOGGED IN OR JUST LOGGED OUT OF THE EXTENSION -->
+
+  <div class="info custom-popup ">
+    <p>Chroma is a chrome extension that will help color blind people distinguish between the
+      colors they cannot distinguish. We have worked to cater the color vision
+      deficiency for
+    <ul>
+      <li>Protonopia</li>
+      <li>Deutronopia</li>
+      <li>Tritanopia</li>
+    </ul>
+    </p>
+
+    <!-- LOGIN METHADOLOGY -->
+
+    <div class="info p-1">
+      <div class="login my-2 ">
+        <p> To access the Chroma, Login In to
+          your existing account.</p>
+        <a target="_blank" href="login.html" class="btn btn-primary d-block mx-auto w-25">Login</a>
+      </div>
+
+      <!-- SIGN UP METHADOLOGY -->
+
+      <div class="sign-up ">
+        <p>
+          If you don't have an account, Sign Up to create a new account.
+        </p>
+        <a href="signup.html" target="_blank" class="btn btn-primary d-block mx-auto w-25">Sign Up</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE POPUP DIVS FOR EACH DISEASE -->
+  <!-- THIS POPUP WILL APPEAR IF THE DISEASE OF THE PATIENT WILL BE PROPTONOPIA -->
+  <div class="protonopia custom-popup">
+    <!-- Default switch -->
+    <div class="custom-control custom-switch">
+      <input type="checkbox" class="custom-control-input" id="customSwitches">
+      <label class="custom-control-label" for="customSwitches">ON/OFF</label>
+    </div>
+
+    <!-- THE HEADING OF THE PROPTONOPIA AND INFO ABOUT THE DISEASE -->
+    <p>
+      You have Protonopia, which is color deficiency to differentiate red shades. So, we have applied filters on all the
+      elements of red color or their combinations with green
+      and blue color. The details of these
+      shades are as follow:
+    </p>
+    <ul>
+      <li class="d-flex justify-content-between p-2">
+
+        <!-- THE INSTRUCTIONS ABOUT THE PATTERNS AND The angles in which they are drawn -->
+
+        <div class="m-0 p-0">
+          <span class=" font-weight-bold">Red:</span>
+          <span>
+            Red Only
+            <!-- The protonopia color deficient can never be able to distinguish red. They always mixes the shades between red and green. SO the shades that include only red which is  -->
+            <span class="font-weight-bold ">RGB(R,0,0)</span></span>
+        </div>
+        <div class="mx-2 position-relative end-0"><img src="./img/0deg.png" class="img" alt=""></div>
+      </li>
+      <li class="d-flex justify-content-between p-2">
+        <div class="m-0 p-0">
+          <span class=" font-weight-bold ">Red & Green:</span>
+          <span>Red and Green Combination: Brown and Yellow Shades
+            <span class="font-weight-bold ">RGB(R,G,0)</span></span>
+        </div>
+        <div class="mx-2 position-relative "><img src="./img/20deg.png" class="img" alt=""></div>
+      </li>
+      <li class="d-flex justify-content-between p-2">
+        <div class="m-0 p-0">
+          <span class=" font-weight-bold ">Green:</span>
+          <span>Green Only
+            <span class="font-weight-bold ">RGB(0,G,0)</span></span>
+        </div>
+        <div class="mx-2 position-relative "><img src="./img/90deg.png" class="img" alt=""></div>
+      </li>
+      <li class="d-flex justify-content-between p-2">
+        <div class="m-0 p-0">
+          <span class=" font-weight-bold">Red & Blue:</span>
+          <span>Red and Blue Combination: Purple and Pink Shades
+            <span class="font-weight-bold ">RGB(R,0,B)</span></span>
+        </div>
+        <div class="mx-2 position-relative "><img src="./img/45deg.png" class="img" alt=""></div>
+      </li>
+      <li class="d-flex justify-content-between p-2">
+        <div class="m-0 p-0">
+          <span class=" font-weight-bold">Green & Blue:</span>
+          <span>Blue and Green Combination: Teal, Light greenish blue shades
+            <span class="font-weight-bold ">RGB(0,G,B)</span></span>
+        </div>
+        <div class="mx-2 position-relative "><img src="./img/135deg.png" class="img" alt=""></div>
+      </li>
+      <li class="d-flex justify-content-between p-2">
+        <div class="m-0 p-0">
+          <span class=" font-weight-bold">Red, Green & Blue:</span>
+          <span>Red, Green and Blue Combination:Red, Blue and Green combinations that are not distinguishable.
+            <span class="font-weight-bold ">RGB(R,G,B)</span></span>
+        </div>
+        <div class="mx-2 position-relative "><img src="./img/110.jpg" class="img" alt=""></div>
+      </li>
+    </ul>
+
+    <!-- THE BUTTON TO LOG OUT FROM THE EXTENSION -->
+    <button class="log-out1 btn btn-primary d-block my-2 mx-auto w-50 text-center">Log Out</button>
+
+  </div>
+
+  <!-- THIS DIV WILL BE BLOCK IF THE DISEASE OF THE USER WILL BE DEUTRONOPIA -->
+
+  <div class="duetronopia custom-popup">
+
+    <div class="custom-control custom-switch">
+      <input type="checkbox" class="custom-control-input" id="customSwitches1">
+      <label class="custom-control-label" for="customSwitches1">ON/OFF</label>
+    </div>
+
+    <p>
+      You have Deutronopia, which is color deficiency to differentiate green shades. So, we have applied filters on all
+      the elements of green color or their combinations with
+      red and blue color. The details of
+      these shades are as follow:
+    </p>
+    <ul>
+      <li class="d-flex justify-content-between p-2">
+        <!-- INFORMATION ABOUT DEUTRONOPIA DISEASE -->
+        <div class="m-0 p-0">
+          <span class=" font-weight-bold ">Green:</span>
+          <span>
+            Green Only
+            <!-- The deutronopia color deficient can never be able to distinguish green. They always mixes the shades between red and green. SO the shades that include only green which is  -->
+            <span class="font-weight-bold ">RGB(0,G,0)</span></span>
+        </div>
+        <div class="mx-2 position-relative end-0"><img src="./img/0deg.png" class="img" alt=""></div>
+      </li>
+      <li class="d-flex justify-content-between p-2">
+        <div class="m-0 p-0">
+          <span class=" font-weight-bold ">Red & Green:</span>
+          <span>Red and Green Combination: Brown and Yellow Shades
+            <span class="font-weight-bold ">RGB(R,G,0)</span></span>
+        </div>
+        <div class="mx-2 position-relative "><img src="./img/20deg.png" class="img" alt=""></div>
+      </li>
+      <li class="d-flex justify-content-between p-2">
+        <div class="m-0 p-0">
+          <span class=" font-weight-bold ">Red:</span>
+          <span>Red Only
+            <span class="font-weight-bold ">RGB(R,0,0)</span></span>
+        </div>
+        <div class="mx-2 position-relative "><img src="./img/90deg.png" class="img" alt=""></div>
+      </li>
+      <li class="d-flex justify-content-between p-2">
+        <div class="m-0 p-0">
+          <span class=" font-weight-bold">Red & Blue:</span>
+          <span>Red and Blue Combination: Purple and Pink Shades
+            <span class="font-weight-bold ">RGB(R,0,B)</span></span>
+        </div>
+        <div class="mx-2 position-relative "><img src="./img/135deg.png" class="img" alt=""></div>
+      </li>
+      <li class="d-flex justify-content-between p-2">
+        <div class="m-0 p-0">
+          <span class=" font-weight-bold ">Green & Blue:</span>
+          <span>Blue and Green Combination: Teal, Light greenish blue shades
+            <span class="font-weight-bold ">RGB(0,G,B)</span></span>
+        </div>
+        <div class="mx-2 position-relative "><img src="./img/45deg.png" class="img" alt=""></div>
+      </li>
+      <li class="d-flex justify-content-between p-2">
+        <div class="m-0 p-0">
+          <span class=" font-weight-bold">Red, Green & Blue:</span>
+          <span>Reg, Green and Blue Combination:Red, Blue and Green combinations that are not distinguishable.
+            <span class="font-weight-bold ">RGB(R,G,B)</span></span>
+        </div>
+        <div class="mx-2 position-relative "><img src="./img/110.jpg" class="img" alt=""></div>
+      </li>
+    </ul>
+
+    <!-- THE BUTTON TO LOG OUT FROM THE EXTENSION -->
+    <button class="log-out2 btn btn-primary d-block my-2 mx-auto w-50 text-center">Log Out</button>
+
+  </div>
+
+  <div class="tritanopia custom-popup">
+
+    <div class="custom-control custom-switch">
+      <input type="checkbox" class="custom-control-input" id="customSwitches2">
+      <label class="custom-control-label" for="customSwitches2">ON/OFF</label>
+    </div>
+    <!-- Details about TRITONOPIA -->
+    <p>
+      You have Tritanopia, which is color deficiency to differentiate blue shades. So, we have applied filters on all
+      the elements of Blue color or their combinations with
+      red and blue color. The details of
+      these shades are as follow:
+    </p>
+    <ul>
+      <li class="d-flex justify-content-between p-2">
+        <div class="m-0 p-0">
+          <span class=" font-weight-bold">Blue:</span>
+          <span>
+            Blue Only
+            <!-- The tritonopia color deficient can never be able to distinguish blue. They always mixes the shades between blue and green. SO the shades that include only blue which is  -->
+            <span class="font-weight-bold ">RGB(0,0,B)</span></span>
+        </div>
+        <div class="mx-2 position-relative end-0"><img src="./img/0deg.png" class="img" alt=""></div>
+      </li>
+      <li class="d-flex justify-content-between p-2">
+        <div class="m-0 p-0">
+          <span class=" font-weight-bold">Red & Green:</span>
+          <span>Red and Green Combination: Brown and Yellow Shades
+            <span class="font-weight-bold ">RGB(R,G,0)</span></span>
+        </div>
+        <div class="mx-2 position-relative "><img src="./img/135deg.png" class="img" alt=""></div>
+      </li>
+      <li class="d-flex justify-content-between p-2">
+        <div class="m-0 p-0">
+          <span class=" font-weight-bold">Green:</span>
+          <span>Green only
+            <span class="font-weight-bold ">RGB(0,G,0)</span></span>
+        </div>
+        <div class="mx-2 position-relative "><img src="./img/90deg.png" class="img" alt=""></div>
+      </li>
+      <li class="d-flex justify-content-between p-2">
+        <div class="m-0 p-0">
+          <span class=" font-weight-bold">Red & Blue:</span>
+          <span>Red and Blue Combination: Purple and Pink Shades
+            <span class="font-weight-bold ">RGB(R,0,B)</span></span>
+        </div>
+        <div class="mx-2 position-relative "><img src="./img/45deg.png" class="img" alt=""></div>
+      </li>
+      <li class="d-flex justify-content-between p-2">
+        <div class="m-0 p-0">
+          <span class=" font-weight-bold">Green & Blue:</span>
+          <span>Blue and Green Combination: Teal, Light greenish blue shades
+            <span class="font-weight-bold ">RGB(0,G,B)</span></span>
+        </div>
+        <div class="mx-2 position-relative "><img src="./img/20deg.png" class="img" alt=""></div>
+      </li>
+      <li class="d-flex justify-content-between p-2">
+        <div class="m-0 p-0">
+          <span class=" font-weight-bold ">Red, Green & Blue:</span>
+          <span>Reg, Green and Blue Combination:Red, Blue and Green combinations that are not distinguishable.
+            <span class="font-weight-bold ">RGB(R,G,B)</span></span>
+        </div>
+        <div class="mx-2 position-relative "><img src="./img/110.jpg" class="img" alt=""></div>
+      </li>
+    </ul>
+
+    <!-- THE BUTTON TO LOG OUT FROM THE EXTENSION -->
+    <button class="log-out3 btn btn-primary d-block my-2 mx-auto w-50 text-center">Log Out</button>
+  </div>
+  <!-- Script files to execute data. Redirect for checking the disease so popups can be displayed blocked or none and popup.js for eventListeners -->
+
+  <sript src="redirect.js"></sript>
+  <script src="popup.js"></script>
+</body>
+
+</html>
